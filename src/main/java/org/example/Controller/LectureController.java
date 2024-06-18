@@ -1,26 +1,25 @@
-package org.example;
+package org.example.Controller;
 
-import lombok.extern.slf4j.Slf4j;
+import org.example.Entity.Lecture;
+import org.example.Service.LectureService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
 @Controller
-@Slf4j
-public class MyController {
+public class LectureController {
 
     @Autowired
-    private service Service;
+    private LectureService lectureService;
 
-    @GetMapping("/test")
+    @GetMapping("/lecture")
     public String hyo(Model model) {
-        List<dto> list =Service.listlist();
+        List<Lecture> list =lectureService.list();
         model.addAttribute("list",list);
 
-        return "test";
+        return "Lecture";
     }
 }

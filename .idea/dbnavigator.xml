@@ -6,7 +6,7 @@
   </component>
   <component name="DBNavigator.Project.DataEditorManager">
     <record-view-column-sorting-type value="BY_INDEX" />
-    <value-preview-text-wrapping value="true" />
+    <value-preview-text-wrapping value="false" />
     <value-preview-pinned value="false" />
   </component>
   <component name="DBNavigator.Project.DatabaseBrowserManager">
@@ -30,7 +30,13 @@
     <connection id="118bb908-adcc-415a-bb51-3e0f058685cf" />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="118bb908-adcc-415a-bb51-3e0f058685cf" dataset="kim.video" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="118bb908-adcc-415a-bb51-3e0f058685cf" dataset="kim.comment" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="118bb908-adcc-415a-bb51-3e0f058685cf" dataset="kim.testtable" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="118bb908-adcc-415a-bb51-3e0f058685cf" dataset="kim.image" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="118bb908-adcc-415a-bb51-3e0f058685cf" dataset="kim.member" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="118bb908-adcc-415a-bb51-3e0f058685cf" dataset="kim.time_table" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="118bb908-adcc-415a-bb51-3e0f058685cf" dataset="kim.lecture" active-filter-id="EMPTY_FILTER" />
   </component>
   <component name="DBNavigator.Project.ObjectQuickFilterManager">
     <last-used-operator value="EQUAL" />
@@ -59,7 +65,7 @@
           <deprecated-pwd value="MTIzNDU=" />
         </database>
         <properties>
-          <auto-commit value="false" />
+          <auto-commit value="true" />
         </properties>
         <ssh-settings>
           <active value="false" />
