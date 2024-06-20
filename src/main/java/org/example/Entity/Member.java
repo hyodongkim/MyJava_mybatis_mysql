@@ -20,19 +20,19 @@ public class Member {
     private Integer year;
     private Integer month;
     private Integer day;
-    private Gender sex;
-    private JoinYesOrNo memberJoin;
+    private String sex;
+    private String memberJoin;
     private String email;
     private Integer countView;
     private Integer countHit;
-    private JobClass job;
+    private String job;
     private String introduce;
     private Integer money;
     private String image;
     private LocalDateTime joinTime;
 
     @Builder
-    public Member(Integer id, String memberId, String password, Integer age, String name, Integer year, Integer month, Integer day, Gender sex, JoinYesOrNo memberJoin, String email, Integer countView, Integer countHit, JobClass job, String introduce, Integer money, String image, LocalDateTime joinTime) {
+    public Member(Integer id, String memberId, String password, Integer age, String name, Integer year, Integer month, Integer day, String sex, String memberJoin, String email, Integer countView, Integer countHit, String job, String introduce, Integer money, String image, LocalDateTime joinTime) {
         this.id = id;
         this.memberId = memberId;
         this.password = password;

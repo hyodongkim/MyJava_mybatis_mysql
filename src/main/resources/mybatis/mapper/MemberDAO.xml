@@ -7,4 +7,36 @@
     <select id="memberList" resultType="org.example.Entity.Member">
         SELECT * FROM Member
     </select>
+    <select id="memberListId" resultType="org.example.Entity.Member">
+        SELECT * FROM Member WHERE id = #{id}
+    </select>
+    <insert id="memberInsert">
+        insert into Member (id,memberId,password,age,name,year,month,day,sex,memberJoin,email,countView,countHit,job,introduce,money,image,joinTime)
+        values (#{id},#{memberId},#{password},#{age},#{name},#{year},#{month},#{day},#{sex},#{memberJoin},#{email},#{countView},#{countHit},#{job},#{introduce},#{money},#{image},now())
+    </insert>
+    <update id="memberUpdate" parameterType="int">
+        update Member set
+        id=#{id},
+        memberId=#{memberId},
+        password=#{password},
+        age=#{age},
+        name=#{name},
+        year=#{year},
+        month=#{month},
+        day=#{day},
+        sex=#{sex},
+        memberJoin=#{memberJoin},
+        email=#{email},
+        countView=#{countView},
+        countHit=#{countHit},
+        job=#{job},
+        introduce=#{introduce},
+        money=#{money},
+        image=#{image},
+        joinTime=#{joinTime}
+        where id = #{id}
+    </update>
+    <delete id="memberDelete" parameterType="int">
+        delete from Member where id = #{id}
+    </delete>
 </mapper>

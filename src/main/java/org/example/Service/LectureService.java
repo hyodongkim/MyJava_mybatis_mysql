@@ -12,8 +12,8 @@ public class LectureService {
     @Autowired
     private LectureDao lectureDao;
 
-    public List<Lecture> list() {
-        return lectureDao.list();
+    public List<Lecture> lectureList() {
+        return lectureDao.lectureList();
     }
 
 }

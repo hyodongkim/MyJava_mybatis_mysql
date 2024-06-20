@@ -17,7 +17,7 @@ public class LectureController {
 
     @GetMapping("/lecture")
     public String hyo(Model model) {
-        List<Lecture> list =lectureService.list();
+        List<Lecture> list =lectureService.lectureList();
         model.addAttribute("list",list);
 
         return "Lecture";

@@ -4,8 +4,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="org.example.Dao.LectureDao">
-    <!-- 회원 로그인 : 아이디 & 패스워드 -->
-    <select id="list" resultType="org.example.Entity.Lecture">
+    <select id="lectureList" resultType="org.example.Entity.Lecture">
         SELECT * FROM lecture
     </select>
 </mapper>
