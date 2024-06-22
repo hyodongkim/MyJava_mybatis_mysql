@@ -1,29 +1,27 @@
 package org.example.Entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.Date;
 @Getter
 @Setter
 @AllArgsConstructor
-@RequiredArgsConstructor
+@NoArgsConstructor
 public class Lecture {
 
     private Integer id;
     private String name;
-    private Long cost;
-    private String subject;
+    private Integer cost;
+    private String subject; //ENUM('JAVA','JAVASCRIPT','REACT','NODE.JS','ORACLE','MYSQL','JSP','THYMELEAF')
     private Integer totalCount;
-    private Integer favorite;
+    private String favorite; //ENUM('YES','NO')
     private String videoName;
     private String videoTime;
     private String teacherName;
-    private String teacherSubject;
-    private Long hit;
-    private Long count;
+    private String teacherSubject; //ENUM('JAVA','JAVASCRIPT','REACT','NODE.JS','ORACLE','MYSQL','JSP','THYMELEAF')
+    private Integer hit;
+    private Integer count;
+    private Integer memberId;
 }
 //id Int Not Null auto_increment,
 //name Varchar(20) not null,

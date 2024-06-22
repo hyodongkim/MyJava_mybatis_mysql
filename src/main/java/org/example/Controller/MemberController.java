@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
@@ -22,34 +23,64 @@ public class MemberController {
         List<Member> list =memberService.memberList();
         model.addAttribute("list",list);
 
-        return "Member";
+        return "MemberList";
     }
     @GetMapping("/memberListId")
-    public String selectById(@RequestParam("id") int id, Model model) {
-        List<Member> list =memberService.memberListId(id);
-        model.addAttribute("list",list);
+    public String selectById(@RequestParam(required = false) Integer id , Model model) {
 
-        return "Member";
+        List<Member> list;
+        if(id!=null) {
+            list = memberService.memberListId(id);
+        }
+        else {
+            list = memberService.memberList();
+        }
+        model.addAttribute("list", list);
+        return "MemberListId";
     }
     @GetMapping("/memberInsert")
     public String insert(@ModelAttribute Member member, Model model) {
 
+        List<Member> list =memberService.memberList();
+        model.addAttribute("list",list);
+
         memberService.memberInsert(member);
 
-        return "Member";
+        return "MemberInsert";
     }
     @GetMapping("/memberUpdate")
-    public String update(@RequestParam("id") int id, Model model) {
+    public String update(@ModelAttribute Member member,@RequestParam(required = false) Integer id, Model model) {
 
-        model.addAttribute("list",memberService.memberUpdate(id));
+        List<Member> list = null;
+        if (id != null) {
+            list = memberService.memberListId(id);
+        } else {
+            list = memberService.memberList();
+        }
+        model.addAttribute("list",list);
 
-        return "Member";
+        return "MemberUpdate";
     }
+
+    @PostMapping("/memberUpdate")
+    public String updatePost(@ModelAttribute Member member,@RequestParam(required = false) Integer id, Model model) {
+
+        memberService.memberUpdate(member);
+        List<Member> list = memberService.memberList();
+
+
+        return "MemberList";
+    }
+
+
     @GetMapping("/memberDelete")
     public String delete(@RequestParam("id") int id, Model model) {
 
+        List<Member> list =memberService.memberList();
+        model.addAttribute("list",list);
+
         memberService.memberDelete(id);
 
-        return "Member";
+        return "MemberDelete";
     }
 }

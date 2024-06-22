@@ -9,11 +9,11 @@ import java.util.List;
 public interface MemberDao {
     public List<Member> memberList();
 
-    public List<Member> memberListId(int id);
+    public List<Member> memberListId(Integer id);
 
     public void memberInsert(Member member);
 
-    public Member memberUpdate(int id);
+    public void memberUpdate(Member member);
 
-    public void memberDelete(int id);
+    public void memberDelete(Integer id);
 }

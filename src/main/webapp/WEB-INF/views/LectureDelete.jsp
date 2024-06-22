@@ -7,8 +7,7 @@
 <!DOCTYPE html>
 <html>
  <body>
-    김효동동
-    <c:forEach items="${list}" var="lec">
+                <c:forEach items="${list}" var="lec">
                     <tr>
                         <td>${lec.id}</td>
                         <td>${lec.name}</td>
@@ -22,7 +21,17 @@
                         <td>${lec.hit}</td>
                         <td>${lec.name}</td>
                         <td>${lec.count}</td>
+                        <td>${lec.memberId}</td>
+                        <br>
                     </tr>
-    </c:forEach>
+                </c:forEach>
+
+                <form action="/lectureDelete" method="get">
+                    <table>
+                        <td><input type="text" name="id" value="" /></td>
+                    </table>
+
+                    <input type="submit" value="제출">
+                </form>
  </body>
 </html>

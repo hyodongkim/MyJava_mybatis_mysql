@@ -7,4 +7,32 @@
     <select id="lectureList" resultType="org.example.Entity.Lecture">
         SELECT * FROM lecture
     </select>
+    <select id="lectureListId" resultType="org.example.Entity.Lecture">
+        SELECT * FROM Lecture WHERE id = #{id}
+    </select>
+    <insert id="lectureInsert">
+        insert into Lecture (id,name,cost,subject,totalCount,favorite,videoName,videoTime,teacherName,teacherSubject,hit,count,memberId)
+        values (default,#{name},#{cost},#{subject},#{totalCount},#{favorite},#{videoName},#{videoTime},#{teacherName},#{teacherSubject},#{hit},#{count},#{memberId})
+    </insert>
+    <update id="lectureUpdate">
+        update Lecture set
+        name=#{name},
+        cost=#{cost},
+        subject=#{subject},
+        totalCount=#{totalCount},
+        favorite=#{favorite},
+        videoName=#{videoName},
+        videoTime=#{videoTime},
+        teacherName=#{teacherName},
+        videoTime=#{videoTime},
+        teacherName=#{teacherName},
+        teacherSubject=#{teacherSubject},
+        hit=#{hit},
+        count=#{count},
+        memberId=#{memberId}
+        where id=#{id}
+    </update>
+    <delete id="lectureDelete" parameterType="int">
+        delete from Lecture where id = #{id}
+    </delete>
 </mapper>

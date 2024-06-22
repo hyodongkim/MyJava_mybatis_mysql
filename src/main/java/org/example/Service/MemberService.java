@@ -15,7 +15,7 @@ public class MemberService {
     public List<Member> memberList() {
         return memberDao.memberList();
     }
-    public List<Member> memberListId(int id) {
+    public List<Member> memberListId(Integer id) {
         return memberDao.memberListId(id);
     }
 
@@ -23,11 +23,11 @@ public class MemberService {
         memberDao.memberInsert(member);
     }
 
-    public Member memberUpdate(int id){
-        return memberDao.memberUpdate(id);
+    public void memberUpdate(Member member){
+        memberDao.memberUpdate(member);
     }
 
-    public void memberDelete(int id){
+    public void memberDelete(Integer id){
         memberDao.memberDelete(id);
     }
 }

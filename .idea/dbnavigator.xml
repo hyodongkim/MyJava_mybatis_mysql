@@ -65,7 +65,7 @@
           <deprecated-pwd value="MTIzNDU=" />
         </database>
         <properties>
-          <auto-commit value="true" />
+          <auto-commit value="false" />
         </properties>
         <ssh-settings>
           <active value="false" />
