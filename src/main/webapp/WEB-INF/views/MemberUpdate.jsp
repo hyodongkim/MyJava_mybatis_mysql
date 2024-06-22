@@ -35,23 +35,23 @@
         <form action="/memberUpdate" method="post">
           <c:forEach var="mem" items="${list}">
             <table>
-                <td><input type="text" name="id" value="${mem.id}" /></td>
-                <td><input type="text" name="memberId" value="${mem.memberId}" /></td>
-                <td><input type="text" name="password" value="${mem.password}" /></td>
-                <td><input type="text" name="age" value="${mem.age}" /></td>
-                <td><input type="text" name="sex" value="${mem.sex}" /></td>
-                <td><input type="text" name="name" value="${mem.name}" /></td>
-                <td><input type="text" name="year" value="${mem.year}" /></td>
-                <td><input type="text" name="month" value="${mem.month}" /></td>
-                <td><input type="text" name="day" value="${mem.day}" /></td>
-                <td><input type="text" name="memberJoin" value="${mem.memberJoin}" /></td>
-                <td><input type="text" name="countView" value="${mem.countView}" /></td>
-                <td><input type="text" name="countHit" value="${mem.countHit}" /></td>
-                <td><input type="text" name="job" value="${mem.job}" /></td>
-                <td><input type="text" name="introduce" value="${mem.introduce}" /></td>
-                <td><input type="text" name="money" value="${mem.money}" /></td>
-                <td><input type="text" name="image" value="${mem.image}" /></td>
-                <td><input type="text" name="joinTime" value="${mem.joinTime}" /></td>
+                <td>id : <input type="text" name="id" value="${mem.id}" /></td>
+                <td>memberId : <input type="text" name="memberId" value="${mem.memberId}" /></td>
+                <td>password : <input type="text" name="password" value="${mem.password}" /></td>
+                <td>age : <input type="text" name="age" value="${mem.age}" /></td>
+                <td>sex : <input type="text" name="sex" value="${mem.sex}" /></td>
+                <td>name : <input type="text" name="name" value="${mem.name}" /></td>
+                <td>year : <input type="text" name="year" value="${mem.year}" /></td>
+                <td>month : <input type="text" name="month" value="${mem.month}" /></td>
+                <td>day : <input type="text" name="day" value="${mem.day}" /></td>
+                <td>memberJoin : <input type="text" name="memberJoin" value="${mem.memberJoin}" /></td>
+                <td>countView : <input type="text" name="countView" value="${mem.countView}" /></td>
+                <td>countHit : <input type="text" name="countHit" value="${mem.countHit}" /></td>
+                <td>job : <input type="text" name="job" value="${mem.job}" /></td>
+                <td>introduce : <input type="text" name="introduce" value="${mem.introduce}" /></td>
+                <td>money : <input type="text" name="money" value="${mem.money}" /></td>
+                <td>image : <input type="text" name="image" value="${mem.image}" /></td>
+                <td>joinTime : <input type="text" name="joinTime" value="${mem.joinTime}" /></td>
 
             </table>
           </c:forEach>

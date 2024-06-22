@@ -30,29 +30,27 @@
                     </tr>
                     <br>
     </c:forEach>
-            <form action="/memberInsert" method="get">
+            <form action="/memberInsert" method="post">
                 <table>
-                    <td><input type="text" name="id" value="" /></td>
-                    <td><input type="text" name="memberId" value="" /></td>
-                    <td><input type="text" name="password" value="" /></td>
-                    <td><input type="text" name="age" value="" /></td>
-                    <td><input type="text" name="sex" value="" /></td>
-                    <td><input type="text" name="name" value="" /></td>
-                    <td><input type="text" name="year" value="" /></td>
-                    <td><input type="text" name="month" value="" /></td>
-                    <td><input type="text" name="day" value="" /></td>
-                    <td><input type="text" name="memberJoin" value="" /></td>
-                    <td><input type="text" name="countView" value="" /></td>
-                    <td><input type="text" name="countHit" value="" /></td>
-                    <td><input type="text" name="job" value="" /></td>
-                    <td><input type="text" name="introduce" value="" /></td>
-                    <td><input type="text" name="money" value="" /></td>
-                    <td><input type="text" name="image" value="" /></td>
-                    <td><input type="text" name="joinTime" value="" /></td>
-
+                   <td>id : <input type="text" name="id" value="${id}" /></td>
+                   <td>memberId : <input type="text" name="memberId" value="${memberId}" /></td>
+                   <td>password : <input type="text" name="password" value="${password}" /></td>
+                   <td>age : <input type="text" name="age" value="${age}" /></td>
+                   <td>sex : <input type="text" name="sex" value="${sex}" /></td>
+                   <td>name : <input type="text" name="name" value="${name}" /></td>
+                   <td>year : <input type="text" name="year" value="${year}" /></td>
+                   <td>month : <input type="text" name="month" value="${month}" /></td>
+                   <td>day : <input type="text" name="day" value="${day}" /></td>
+                   <td>memberJoin : <input type="text" name="memberJoin" value="${memberJoin}" /></td>
+                   <td>countView : <input type="text" name="countView" value="${countView}" /></td>
+                   <td>countHit : <input type="text" name="countHit" value="${countHit}" /></td>
+                   <td>job : <input type="text" name="job" value="${job}" /></td>
+                   <td>introduce : <input type="text" name="introduce" value="${introduce}" /></td>
+                   <td>money : <input type="text" name="money" value="${money}" /></td>
+                   <td>image : <input type="text" name="image" value="${image}" /></td>
+                   <td>joinTime : <input type="text" name="joinTime" value="${joinTime}" /></td>
                 </table>
-
-                <input type="submit" value="제출">
+                    <input type="submit" value="제출">
             </form>
  </body>
 </html>

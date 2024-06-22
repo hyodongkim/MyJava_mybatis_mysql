@@ -31,7 +31,7 @@
                     <br>
     </c:forEach>
 
-    <form action="/memberDelete" method="get">
+    <form action="/memberDelete" method="post">
         <table>
             <td><input type="text" name="id" value="" /></td>
         </table>

@@ -4,6 +4,7 @@ import lombok.*;
 import org.example.Dto.Gender;
 import org.example.Dto.JobClass;
 import org.example.Dto.JoinYesOrNo;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDateTime;
 import java.util.Date;
@@ -20,19 +21,20 @@ public class Member {
     private Integer year;
     private Integer month;
     private Integer day;
-    private String sex;
-    private String memberJoin;
+    private String sex; //sex ENUM('MAN','WOMAN')
+    private String memberJoin; //memberJoin ENUM('JOIN','NOTJOIN')
     private String email;
     private Integer countView;
     private Integer countHit;
-    private String job;
+    private String job; //job ENUM('STUDENT','TEACHER','ADMIN')
     private String introduce;
     private Integer money;
     private String image;
-    private LocalDateTime joinTime;
+    @DateTimeFormat(pattern="yyyy-MM-dd")
+    private String joinTime;
 
     @Builder
-    public Member(Integer id, String memberId, String password, Integer age, String name, Integer year, Integer month, Integer day, String sex, String memberJoin, String email, Integer countView, Integer countHit, String job, String introduce, Integer money, String image, LocalDateTime joinTime) {
+    public Member(Integer id, String memberId, String password, Integer age, String name, Integer year, Integer month, Integer day, String sex, String memberJoin, String email, Integer countView, Integer countHit, String job, String introduce, Integer money, String image, String joinTime) {
         this.id = id;
         this.memberId = memberId;
         this.password = password;

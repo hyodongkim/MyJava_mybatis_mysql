@@ -16,6 +16,7 @@
     </insert>
     <update id="memberUpdate">
         update Member set
+        id=#{id},
         memberId=#{memberId},
         password=#{password},
         age=#{age},

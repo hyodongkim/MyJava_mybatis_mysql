@@ -44,7 +44,15 @@ public class MemberController {
         List<Member> list =memberService.memberList();
         model.addAttribute("list",list);
 
+        return "MemberInsert";
+    }
+    @PostMapping("/memberInsert")
+    public String insertPost(@ModelAttribute Member member, Model model) {
+
         memberService.memberInsert(member);
+
+        List<Member> list =memberService.memberList();
+        model.addAttribute("list",list);
 
         return "MemberInsert";
     }
@@ -66,10 +74,11 @@ public class MemberController {
     public String updatePost(@ModelAttribute Member member,@RequestParam(required = false) Integer id, Model model) {
 
         memberService.memberUpdate(member);
+
         List<Member> list = memberService.memberList();
+        model.addAttribute("list",list);
 
-
-        return "MemberList";
+        return "MemberUpdate";
     }
 
 
@@ -79,7 +88,16 @@ public class MemberController {
         List<Member> list =memberService.memberList();
         model.addAttribute("list",list);
 
+        return "MemberDelete";
+    }
+
+    @PostMapping("/memberDelete")
+    public String deletePost(@RequestParam("id") int id, Model model) {
+
         memberService.memberDelete(id);
+
+        List<Member> list =memberService.memberList();
+        model.addAttribute("list",list);
 
         return "MemberDelete";
     }
